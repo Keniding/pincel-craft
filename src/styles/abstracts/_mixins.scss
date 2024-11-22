@@ -1,0 +1,24 @@
+// Efecto vidriado (glassmorphism)
+@mixin glass-effect {
+  @apply backdrop-blur-sm;
+  background: $glass-bg;
+  border: 1px solid $glass-border;
+  box-shadow: $glass-shadow;
+}
+
+// Gradientes suaves
+@mixin pastel-gradient($direction: 45deg) {
+  background: linear-gradient(
+      $direction,
+      map-get($colors, 'primary'),
+      map-get($colors, 'secondary')
+  );
+}
+
+// Animación hover suave
+@mixin hover-lift {
+  @apply transition-transform duration-300;
+  &:hover {
+    @apply transform -translate-y-1;
+  }
+}

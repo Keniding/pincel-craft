@@ -1,0 +1,22 @@
+// Paleta de colores pasteles
+$colors: (
+  'primary': #FFB5E8,    // Rosa pastel
+  'secondary': #B5DEFF,  // Azul pastel
+  'accent': #AFF8DB,     // Menta pastel
+  'background': #F8F9FE, // Blanco suave
+  'surface': #FFFFFF,    // Blanco
+  'text': #6C7293,       // Texto suave
+);
+
+// Variables para efectos de vidrio
+$glass-bg: rgba(255, 255, 255, 0.25);
+$glass-border: rgba(255, 255, 255, 0.18);
+$glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+
+// Border radius
+$border-radius-sm: 8px;
+$border-radius-md: 12px;
+$border-radius-lg: 20px;
+
+// Transiciones
+$transition-speed: 0.3s;

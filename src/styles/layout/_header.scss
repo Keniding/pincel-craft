@@ -1,0 +1,22 @@
+.header {
+  @include glass-effect;
+  @apply rounded-lg p-4 mb-6;
+
+  &__container {
+    @apply flex justify-between items-center;
+  }
+
+  &__nav {
+    @apply flex gap-6;
+
+    &-item {
+      @apply px-4 py-2 rounded-md transition-all duration-300;
+      color: map-get($colors, 'text');
+
+      &:hover {
+        @apply transform -translate-y-0.5;
+        background: rgba(map-get($colors, 'primary'), 0.1);
+      }
+    }
+  }
+}

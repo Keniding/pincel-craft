@@ -1,0 +1,13 @@
+.btn {
+  @apply px-6 py-3 rounded-md cursor-pointer;
+  @include hover-lift;
+
+  &--primary {
+    @include glass-effect;
+    color: map-get($colors, 'text');
+
+    &:hover {
+      background: rgba(map-get($colors, 'primary'), 0.3);
+    }
+  }
+}

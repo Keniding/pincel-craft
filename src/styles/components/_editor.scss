@@ -1,0 +1,55 @@
+.editor {
+  @include glass-effect;
+  border-radius: $border-radius-lg;
+  overflow: hidden;
+
+  &__header {
+    padding: 1rem;
+    border-bottom: 1px solid $glass-border;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content {
+    padding: 1.5rem;
+    min-height: 300px;
+    background: rgba(255, 255, 255, 0.7);
+
+    &:focus {
+      outline: none;
+      background: rgba(255, 255, 255, 0.9);
+    }
+  }
+
+  &__toolbar {
+    display: flex;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border-bottom: 1px solid $glass-border;
+
+    &-button {
+      padding: 0.5rem;
+      border-radius: $border-radius-sm;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: map-get($colors, 'text');
+
+      &:hover {
+        background: rgba(map-get($colors, 'primary'), 0.1);
+      }
+
+      &.active {
+        background: rgba(map-get($colors, 'primary'), 0.2);
+      }
+    }
+  }
+
+  &__statusbar {
+    padding: 0.5rem 1rem;
+    background: rgba(map-get($colors, 'background'), 0.5);
+    font-size: 0.875rem;
+    color: map-get($colors, 'text');
+  }
+}

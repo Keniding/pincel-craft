@@ -1,0 +1,32 @@
+body {
+  background: linear-gradient(135deg, #f6f8ff 0%, #f1f5ff 100%);
+  color: map-get($colors, 'text');
+  font-family: 'Inter', sans-serif;
+}
+
+// Animaciones suaves globales
+* {
+  transition: background-color $transition-speed ease,
+  transform $transition-speed ease,
+  box-shadow $transition-speed ease;
+}
+
+// Scrollbar personalizado
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(map-get($colors, 'primary'), 0.1);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(map-get($colors, 'primary'), 0.3);
+  border-radius: 10px;
+
+  &:hover {
+    background: rgba(map-get($colors, 'primary'), 0.5);
+  }
+}

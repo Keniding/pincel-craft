@@ -1,0 +1,42 @@
+.header {
+  @include glass-effect;
+  padding: 1rem 2rem;
+  border-radius: $border-radius-lg;
+  margin-bottom: 1.5rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    @include hover-lift;
+
+    img {
+      height: 40px;
+      width: auto;
+    }
+  }
+
+  &__nav {
+    display: flex;
+    gap: 1.5rem;
+
+    &-item {
+      padding: 0.5rem 1rem;
+      border-radius: $border-radius-sm;
+      color: map-get($colors, 'text');
+      transition: all $transition-speed ease;
+
+      &:hover {
+        background: rgba(map-get($colors, 'primary'), 0.1);
+        transform: translateY(-2px);
+      }
+
+      &.active {
+        background: rgba(map-get($colors, 'primary'), 0.2);
+      }
+    }
+  }
+}

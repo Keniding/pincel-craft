@@ -1,0 +1,11 @@
+.workspace {
+  background: map-get($colors, 'background');
+  min-height: 100vh;
+  padding: 2rem;
+
+  &__container {
+    @include pastel-gradient(120deg);
+    border-radius: $border-radius-lg;
+    padding: 2rem;
+  }
+}

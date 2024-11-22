@@ -1,0 +1,58 @@
+/* You can add global styles to this file, and also import other style files */
+// Directivas de Tailwind CSS
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Importación de archivos base
+@import 'styles/base/reset';        // Reseteo de estilos CSS
+@import 'styles/base/typography';   // Configuración de tipografía
+
+// Importación de abstracts (utilidades)
+@import 'styles/abstracts/variables';  // Variables SCSS
+@import 'styles/abstracts/mixins';     // Mixins SCSS
+@import 'styles/abstracts/functions';   // Funciones SCSS
+
+// Importación de componentes
+@import 'styles/components/buttons';     // Estilos de botones
+@import 'styles/components/toolbar';     // Estilos de barra de herramientas
+@import 'styles/components/canvas';      // Estilos del lienzo
+@import 'styles/components/editor';      // Estilos del editor
+@import 'styles/components/tools-panel'; // Estilos del panel de herramientas
+
+// Importación de layouts
+@import 'styles/layout/header';          // Estilos del encabezado
+@import 'styles/layout/workspace';       // Estilos del espacio de trabajo
+
+// Importación del tema
+@import 'styles/themes/default';         // Tema por defecto
+
+// Estilos globales actualizados
+html, body {
+  @apply h-full m-0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f6f8ff 0%, #f1f5ff 100%);
+  color: map-get($colors, 'text');
+}
+
+// Scrollbar personalizado
+::-webkit-scrollbar {
+  @apply w-2 h-2;
+}
+
+::-webkit-scrollbar-track {
+  @apply rounded-full;
+  background: rgba(map-get($colors, 'primary'), 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  @apply rounded-full;
+  background: rgba(map-get($colors, 'primary'), 0.3);
+
+  &:hover {
+    background: rgba(map-get($colors, 'primary'), 0.5);
+  }
+}

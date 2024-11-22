@@ -1,0 +1,10 @@
+.canvas {
+  background: map-get($colors, 'surface');
+  border-radius: $border-radius-lg;
+  @include glass-effect;
+
+  &__container {
+    padding: 1rem;
+    position: relative;
+  }
+}

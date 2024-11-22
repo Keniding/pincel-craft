@@ -1,0 +1,16 @@
+.toolbar {
+  @include glass-effect;
+  border-radius: $border-radius-lg;
+  padding: 1rem;
+  margin: 1rem;
+
+  &__item {
+    border-radius: $border-radius-sm;
+    padding: 0.5rem;
+    transition: all $transition-speed ease;
+
+    &:hover {
+      background: rgba(map-get($colors, 'primary'), 0.1);
+    }
+  }
+}

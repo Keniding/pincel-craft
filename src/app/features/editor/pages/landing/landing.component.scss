@@ -1,0 +1,63 @@
+.hero {
+  @apply relative overflow-hidden;
+
+  &::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-br from-primary/10 to-secondary/10 -z-10;
+  }
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary;
+}
+
+.feature-card {
+  @include glass-effect;
+  @apply p-6 rounded-xl transition-all duration-300;
+
+  &:hover {
+    @apply transform -translate-y-2;
+  }
+
+  .icon-wrapper {
+    @apply w-12 h-12 rounded-full flex items-center justify-center mb-4;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+
+    i {
+      @apply text-white text-xl;
+    }
+  }
+}
+
+.step-card {
+  @include glass-effect;
+  @apply p-6 rounded-xl text-center relative;
+
+  .step-number {
+    @apply w-10 h-10 rounded-full flex items-center justify-center text-white font-bold;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    margin: -2rem auto 1rem;
+  }
+}
+
+.editor-preview {
+  @include glass-effect;
+  @apply rounded-xl overflow-hidden relative;
+
+  &::after {
+    content: '';
+    @apply absolute inset-0;
+    background: linear-gradient(45deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+  }
+
+  img {
+    @apply w-full h-auto;
+  }
+}
+
+.btn {
+  &--white {
+    @apply bg-white text-primary font-semibold px-8 py-3 rounded-lg;
+    @include hover-lift;
+  }
+}

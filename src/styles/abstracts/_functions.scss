@@ -1,0 +1,74 @@
+.functions {
+  @include glass-effect;
+  border-radius: $border-radius-lg;
+  padding: 1.5rem;
+
+  &__group {
+    margin-bottom: 2rem;
+
+    &-title {
+      font-size: 1.1rem;
+      margin-bottom: 1rem;
+      color: map-get($colors, 'text');
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid $glass-border;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem;
+    border-radius: $border-radius-md;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    transition: all $transition-speed ease;
+
+    &:hover {
+      background: rgba(map-get($colors, 'primary'), 0.1);
+      transform: translateX(5px);
+    }
+
+    &-icon {
+      margin-right: 1rem;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: $border-radius-sm;
+      background: rgba(map-get($colors, 'secondary'), 0.2);
+    }
+
+    &-label {
+      flex-grow: 1;
+    }
+
+    &-shortcut {
+      font-size: 0.875rem;
+      color: rgba(map-get($colors, 'text'), 0.6);
+    }
+
+    &.active {
+      background: rgba(map-get($colors, 'primary'), 0.2);
+    }
+  }
+
+  &__search {
+    margin-bottom: 1.5rem;
+
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      border-radius: $border-radius-md;
+      border: 1px solid $glass-border;
+      background: rgba(255, 255, 255, 0.8);
+
+      &:focus {
+        outline: none;
+        border-color: rgba(map-get($colors, 'primary'), 0.5);
+        background: rgba(255, 255, 255, 0.95);
+      }
+    }
+  }
+}
