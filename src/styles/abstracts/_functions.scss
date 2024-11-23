@@ -1,73 +1,51 @@
+@use 'src/styles/abstracts/mixins' as mix;
+
 .functions {
-  @include glass-effect;
-  border-radius: $border-radius-lg;
-  padding: 1.5rem;
+  @include mix.glass-effect;
+  @apply p-6 rounded-xl;
 
   &__group {
-    margin-bottom: 2rem;
+    @apply mb-8;
 
     &-title {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      color: map-get($colors, 'text');
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid $glass-border;
+      @apply text-lg mb-4 text-gray-700 pb-2 border-b border-white/20;
     }
   }
 
   &__item {
-    display: flex;
-    align-items: center;
-    padding: 0.75rem;
-    border-radius: $border-radius-md;
-    margin-bottom: 0.5rem;
-    cursor: pointer;
-    transition: all $transition-speed ease;
+    @apply flex items-center p-3 rounded-lg mb-2 cursor-pointer transition-all duration-300;
 
     &:hover {
-      background: rgba(map-get($colors, 'primary'), 0.1);
-      transform: translateX(5px);
+      @apply bg-primary-100/10 translate-x-[5px];
     }
 
     &-icon {
-      margin-right: 1rem;
-      width: 24px;
-      height: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: $border-radius-sm;
-      background: rgba(map-get($colors, 'secondary'), 0.2);
+      @apply mr-4 w-6 h-6 flex items-center justify-center rounded
+             bg-secondary-100/20;
     }
 
     &-label {
-      flex-grow: 1;
+      @apply flex-grow;
     }
 
     &-shortcut {
-      font-size: 0.875rem;
-      color: rgba(map-get($colors, 'text'), 0.6);
+      @apply text-sm text-gray-500/60;
     }
 
     &.active {
-      background: rgba(map-get($colors, 'primary'), 0.2);
+      @apply bg-primary-100/20;
     }
   }
 
   &__search {
-    margin-bottom: 1.5rem;
+    @apply mb-6;
 
     input {
-      width: 100%;
-      padding: 0.75rem;
-      border-radius: $border-radius-md;
-      border: 1px solid $glass-border;
-      background: rgba(255, 255, 255, 0.8);
+      @apply w-full p-3 rounded-lg border border-white/20
+             bg-white/80 transition-all duration-300;
 
       &:focus {
-        outline: none;
-        border-color: rgba(map-get($colors, 'primary'), 0.5);
-        background: rgba(255, 255, 255, 0.95);
+        @apply outline-none border-primary-300/50 bg-white/95;
       }
     }
   }

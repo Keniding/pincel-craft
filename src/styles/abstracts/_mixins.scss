@@ -1,4 +1,7 @@
-// Efecto vidriado (glassmorphism)
+// src/styles/abstracts/_mixins.scss
+@use 'sass:map';
+@use './variables' as var;
+
 @mixin glass-effect {
   @apply backdrop-blur-sm;
   background: $glass-bg;
@@ -6,16 +9,14 @@
   box-shadow: $glass-shadow;
 }
 
-// Gradientes suaves
 @mixin pastel-gradient($direction: 45deg) {
   background: linear-gradient(
-      $direction,
-      map-get($colors, 'primary'),
-      map-get($colors, 'secondary')
+    $direction,
+    map-get($colors, 'primary'),
+    map-get($colors, 'secondary')
   );
 }
 
-// Animación hover suave
 @mixin hover-lift {
   @apply transition-transform duration-300;
   &:hover {

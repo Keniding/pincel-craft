@@ -1,3 +1,5 @@
+// src/styles/abstracts/_variables.scss
+
 // Paleta de colores pasteles
 $colors: (
   'primary': #FFB5E8,    // Rosa pastel
@@ -6,22 +8,21 @@ $colors: (
   'background': #F8F9FE, // Blanco suave
   'surface': #FFFFFF,    // Blanco
   'text': #6C7293,       // Texto suave
-);
+) !default;
 
 // Variables para efectos de vidrio
-$glass-bg: rgba(255, 255, 255, 0.25);
-$glass-border: rgba(255, 255, 255, 0.18);
-$glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15);
+$glass-bg: rgba(255, 255, 255, 0.25) !default;
+$glass-border: rgba(255, 255, 255, 0.18) !default;
+$glass-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15) !default;
 
 // Border radius
-$border-radius-sm: 8px;
-$border-radius-md: 12px;
-$border-radius-lg: 20px;
+$border-radius-sm: 8px !default;
+$border-radius-md: 12px !default;
+$border-radius-lg: 20px !default;
 
 // Transiciones
-$transition-speed: 0.3s;
+$transition-speed: 0.3s !default;
 
-// Configuración de Tailwind (si necesitas sobrescribir valores)
 :root {
   --primary: #{map-get($colors, 'primary')};
   --secondary: #{map-get($colors, 'secondary')};

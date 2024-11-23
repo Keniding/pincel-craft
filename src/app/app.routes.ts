@@ -3,8 +3,8 @@ import {LandingComponent} from "./features/editor/pages/landing/landing.componen
 
 export const routes: Routes = [
   {
-    path: '/home',
+    path: 'home',
     component: LandingComponent,
     title: 'Pincel-Craft - Editor de imágenes profesional'
-  },
+  }, 
 ];
